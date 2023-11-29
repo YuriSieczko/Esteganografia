@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esteganografia em HTML</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+    .top-row {
+      margin-bottom: 20px;
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-row">
+      <div class="box" style="background-color: #FF0000;"></div> 
+      <div class="box" style="background-color: #00FF00;"></div> 
+      <div class="box" style="background-color: #0000FF;"></div> 
+    </div>
+
+    <script>
+      document.querySelectorAll('.box')[0].style.backgroundColor = '#FF0101'; 
+      document.querySelectorAll('.box')[1].style.backgroundColor = '#00FF10'; 
+      document.querySelectorAll('.box')[2].style.backgroundColor = '#0000FF'; 
+    </script>
+    <div class="bottom-row">
+      <div class="box" style="background-color: #FFFF00;"></div> 
+      <div class="box" style="background-color: #FF00FF;"></div> 
+      <div class="box" style="background-color: #00FFFF;"></div> 
+    </div>
+  </div>
+</body>
+</html>
